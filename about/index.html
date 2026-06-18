@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>BoomBigNose+ — ชุมชนของเรา</title>
+<meta name="description" content="เข้าร่วมชุมชน BoomBigNose+ บน Kruoop — คอร์ส คอมมูนิตี้ และอีเวนต์" />
+<meta property="og:title" content="BoomBigNose+ — ชุมชนของเรา" />
+<meta property="og:description" content="เข้าร่วมชุมชน BoomBigNose+ บน Kruoop" />
+<meta property="og:type" content="website" />
+<style>
+  :root{
+    --navy:#0b1020; --navy2:#121933; --gold:#e8c265; --gold-soft:#f4dd9a;
+    --ink:#f6f4ef; --mute:#a7aec6; --hair:rgba(255,255,255,.10);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+  html,body{height:100%}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+    background:radial-gradient(120% 80% at 50% -10%,#1a2347 0%,var(--navy) 55%);
+    color:var(--ink);min-height:100svh;display:flex;align-items:center;justify-content:center;
+    padding:24px;
+  }
+  .card{
+    width:100%;max-width:420px;background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));
+    border:1px solid var(--hair);border-radius:28px;padding:32px 24px 28px;text-align:center;
+    backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+    box-shadow:0 24px 60px rgba(0,0,0,.45);
+  }
+  .badge{
+    width:84px;height:84px;border-radius:24px;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;
+    background:linear-gradient(145deg,#15203f,#0c1226);border:1px solid rgba(232,194,101,.35);
+    font-size:38px;font-weight:800;color:var(--gold);letter-spacing:-1px;
+  }
+  h1{font-size:24px;font-weight:800;letter-spacing:-.3px;margin-bottom:6px}
+  .sub{color:var(--gold-soft);font-weight:600;font-size:14px;margin-bottom:18px}
+  p.desc{color:var(--mute);font-size:15px;line-height:1.6;margin-bottom:24px}
+  .btn{
+    display:block;width:100%;padding:15px 18px;border-radius:16px;font-size:16px;font-weight:700;
+    text-decoration:none;border:none;cursor:pointer;
+  }
+  .btn-primary{background:linear-gradient(180deg,var(--gold-soft),var(--gold));color:#241a02;
+    box-shadow:0 8px 24px rgba(232,194,101,.28)}
+  .btn-primary:active{transform:translateY(1px)}
+  .note{margin-top:16px;color:var(--mute);font-size:13px;line-height:1.5}
+  .foot{margin-top:24px;color:#6b7392;font-size:12px}
+  a.link{color:var(--gold-soft);text-decoration:none}
+</style>
+</head>
+<body>
+  <main class="card">
+    <div class="badge">∞</div>
+    <h1>BoomBigNose+</h1>
+    <div class="sub">เจ้าของชุมชน · Vittawat Sootawee</div>
+    <p class="desc">
+      ชุมชนแห่งการเรียนรู้ AI และเทคโนโลยี — คอร์สเรียน คอมมูนิตี้
+      และอีเวนต์ ทั้งหมดอยู่ในแอป Kruoop
+    </p>
+
+    <a class="btn btn-primary" id="openApp" href="kruoop://boombignose-8034/about">เปิดในแอป Kruoop</a>
+
+    <p class="note" id="hint">
+      มีแอป Kruoop อยู่แล้ว? ปุ่มด้านบนจะพาไปหน้าชุมชนทันที<br />
+      ยังไม่มีแอป? เร็ว ๆ นี้บน App Store
+    </p>
+
+    <div class="foot">© BoomBigNose · <a class="link" href="https://boombignose.org">boombignose.org</a></div>
+  </main>
+
+  <script>
+    // Reflect a friendlier hint if the user is on desktop (the app link only
+    // works on the phone where Kruoop is installed).
+    var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    if (!isMobile) {
+      document.getElementById('hint').innerHTML =
+        'เปิดลิงก์นี้บนมือถือที่ติดตั้งแอป Kruoop เพื่อเข้าหน้าชุมชนโดยตรง';
+    }
+  </script>
+</body>
+</html>

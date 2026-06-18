@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "59CAS739TY.org.boombignose.kruoop",
+        "paths": [ "/about", "/about/", "/*/about", "/*/about/" ]
+      }
+    ]
+  }
+}
